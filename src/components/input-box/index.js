@@ -50,6 +50,7 @@ class InputBox extends Component {
 
     return (
       <StyledInput
+        id={id}
         type="text"
         placeholder={placeholder}
         value={value}

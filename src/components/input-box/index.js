@@ -15,6 +15,7 @@ class InputBox extends Component {
      * inputBoxFontSize: Size of the font of the input box.
      * inputBoxHeight: Height of the input box.
      */
+    id: PropTypes.string,
     placeholder: PropTypes.string,
     value: PropTypes.string,
     onChange: PropTypes.func,
@@ -36,6 +37,7 @@ class InputBox extends Component {
 
   render() {
     const {
+      id,
       placeholder,
       value,
       onChange,

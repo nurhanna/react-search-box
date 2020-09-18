@@ -35,6 +35,7 @@ export default class ReactSearchBox extends Component {
      * dropDownHoverColor: Background color on hover of the dropdown list items.
      * dropDownBorderColor: Border color of the dropdown.
      */
+    id: PropTypes.string,
     placeholder: PropTypes.string,
     data: PropTypes.array.isRequired,
     fuseConfigs: PropTypes.object,
@@ -62,6 +63,7 @@ export default class ReactSearchBox extends Component {
     /**
      * Set the placeholder as empty text by default
      */
+    id: '',
     placeholder: '',
     inputBoxFontColor: '#000',
     inputBoxBorderColor: '#cacaca96',
@@ -190,6 +192,7 @@ export default class ReactSearchBox extends Component {
      * matches with the input, then that matched item appears in the dropdown.
      */
     const {
+      id,
       placeholder,
       onFocus,
       autoFocus,
@@ -202,6 +205,7 @@ export default class ReactSearchBox extends Component {
 
     return (
       <InputBox
+        id={id}
         type="text"
         placeholder={placeholder}
         value={value}

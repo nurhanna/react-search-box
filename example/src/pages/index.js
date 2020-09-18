@@ -15,6 +15,7 @@ class IndexPage extends Component {
     return (
       <div className="react-search-box-container">
         <ReactSearchBox
+          key="testing"
           placeholder="Search for John, Jane or Mary"
           data={data}
           onSelect={record => console.log(record)}
@@ -26,6 +27,21 @@ class IndexPage extends Component {
             threshold: 0.05,
           }}
           value="John"
+        />
+
+        <ReactSearchBox
+          placeholder="Search for John, Jane or Mary"
+          data={data}
+          key="testing123"
+          onSelect={record => console.log(record)}
+          onFocus={() => {
+            console.log('This function is called when is focussed')
+          }}
+          onChange={value => console.log(value)}
+          fuseConfigs={{
+            threshold: 0.05,
+          }}
+          value="Mary"
         />
       </div>
     )
